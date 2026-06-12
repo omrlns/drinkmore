@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF0ED"
+    android:padding="16dp">
+
+    <!-- Top Greetings Header row -->
+    <TextView
+        android:id="@+id/tv_dashboard_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="DRINK+ | Dashboard"
+        android:textColor="#005C8A"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FF3333"
+        android:text="Sair"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_dashboard_title"
+        app:layout_constraintBottom_toYOf="@id/tv_dashboard_title" />
+
+    <!-- Streak/Ofensiva State Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_streak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/tv_dashboard_title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_streak_emoji"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="🔥"
+                android:textSize="28sp"
+                android:gravity="center"
+                android:background="#FFF7F5"
+                android:backgroundTint="#FFECE5" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/streak_title"
+                    android:textColor="#5A6B7C"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_streak_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 Dias Seguidos"
+                    android:textColor="#E05200"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Main Hydration status totalizer progress card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/cv_streak">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/progress_title"
+                android:textColor="#5A6B7C"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <!-- Progress Total -->
+            <TextView
+                android:id="@+id/tv_progress_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="0 / 2500 mL"
+                android:textColor="#005C8A"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/pb_hydration_meter"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="16dp"
+                android:max="2500"
+                android:progress="0"
+                android:progressTint="#005C8A"
+                android:progressBackgroundTint="#D1D6D4" />
+
+            <TextView
+                android:id="@+id/tv_instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Beba água hoje para atingir sua meta."
+                android:textColor="#5A6B7C"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Preset Shortcuts Text Label -->
+    <TextView
+        android:id="@+id/tv_presets_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/presets_title"
+        android:textColor="#005C8A"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_progress" />
+
+    <!-- 3x2 Presets adding grid (Uses individual layouts or structured LinearLayout rows) -->
+    <LinearLayout
+        android:id="@+id/ll_row1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_presets_title">
+
+        <Button
+            android:id="@+id/btn_preset_100"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="+100 mL"
+            android:textColor="#005C8A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_preset_150"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="3dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="+150 mL"
+            android:textColor="#005C8A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_preset_200"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="+200 mL"
+            android:textColor="#005C8A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_row2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ll_row1">
+
+        <Button
+            android:id="@+id/btn_preset_300"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="+300 mL"
+            android:textColor="#005C8A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_preset_500"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="3dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="+500 mL"
+            android:textColor="#005C8A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_preset_750"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="+750 mL"
+            android:textColor="#005C8A"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

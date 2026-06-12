@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF0ED"
+    android:padding="24dp">
+
+    <!-- Title and Slogan Header -->
+    <TextView
+        android:id="@+id/tv_setup_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Métricas de Hidratação"
+        android:textColor="#005C8A"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_setup_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Informe suas informações físicas para que possamos calcular o melhor volume diário sugerido para seu equilíbrio metabólico."
+        android:textColor="#5A6B7C"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_setup_title" />
+
+    <!-- Personal Metrics Info Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_formula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="#005C8A"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_setup_desc">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/metrics_formula_title"
+                android:textColor="#B3FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/metrics_formula_subtitle"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="@string/metrics_formula_desc"
+                android:textColor="#E6FFFFFF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Name input (Optional but elegant) -->
+    <TextView
+        android:id="@+id/tv_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/name_label"
+        android:textColor="#005C8A"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_formula" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="6dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Escreva seu nome"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#5A6B7C"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_label" />
+
+    <!-- Weight input -->
+    <TextView
+        android:id="@+id/tv_weight_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/weight_label"
+        android:textColor="#005C8A"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_name" />
+
+    <EditText
+        android:id="@+id/et_weight"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="6dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="Ex: 75"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#5A6B7C"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_weight_label" />
+
+    <!-- Confirm / Progression Button -->
+    <Button
+        android:id="@+id/btn_save_goal"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#005C8A"
+        android:text="Salvar e Acessar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/et_weight" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

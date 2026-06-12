@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DRINK+</string>
+    <string name="login_title">Entrar</string>
+    <string name="register_title">Registrar</string>
+    <string name="slogan">Fácil, intuitivo e focado em sua hidratação diária.</string>
+    <string name="btn_login">Acessar Drink+</string>
+    <string name="btn_register">Criar Conta</string>
+    <string name="btn_google_login">Entrar com o Google</string>
+    <string name="email_label">Endereço de E-mail</string>
+    <string name="password_label">Senha</string>
+    <string name="password_confirm_label">Criar Senha</string>
+    <string name="name_label">Nome Completo</string>
+    <string name="weight_label">Peso Atual (Kg)</string>
+    <string name="interval_label">Lembrete a cada %1$d minutos</string>
+    <string name="error_empty_fields">Por favor, preencha todos os campos.</string>
+    <string name="error_invalid_weight">Por favor, insira um peso válido.</string>
+    <string name="error_email_exists">Este e-mail já está registrado.</string>
+    <string name="error_invalid_credentials">E-mail ou senha incorretos e/ou inválidos.</string>
+    <string name="msg_logged_water">Sucesso! %1$d mL de água foram adicionados.</string>
+    <string name="msg_log_deleted">Registro de consumo removido.</string>
+    <string name="msg_profile_saved">Métricas de perfil e meta salvas com sucesso!</string>
+    <string name="msg_logged_out">Sessão encerrada com sucesso.</string>
+    <string name="progress_title">PROGRESSÃO DIÁRIA</string>
+    <string name="goal_recalculated">Meta diária sugerida: %1$d mL</string>
+    <string name="goal_completed">Meta de Hidratação Diária Concluída! Parabéns! 🎉</string>
+    <string name="goal_remaining">Beba mais %1$d mL para atingir seu objetivo.</string>
+    <string name="presets_title">ATALHOS DE CONSUMO 💧</string>
+    <string name="history_title">HISTÓRICO DO DIA</string>
+    <string name="no_logs_title">Nenhuma água registrada hoje.</string>
+    <string name="no_logs_sub">Toque nos botões de atalho acima para registrar sua hidratação.</string>
+    <string name="tab_tracker">Consumo</string>
+    <string name="tab_profile">Meta e Perfil</string>
+    <string name="metrics_formula_title">FÓRMULA DE METRIFICAÇÃO</string>
+    <string name="metrics_formula_subtitle">Peso × 35 mL = Meta Recomendada</string>
+    <string name="metrics_formula_desc">Esta equação fornece volumes de ingestão de água personalizados com base no seu peso corporal para manter seu organismo em perfeito equilíbrio.</string>
+    <string name="profile_parameters_title">PARÂMETROS DE METAS</string>
+    <string name="save_profile_btn">Salvar Alterações de Meta</string>
+    <string name="notification_reminders_title">Lembretes automáticos: a cada %1$d min</string>
+    <string name="logged_at">Registrado às %1$s</string>
+    
+    <string name="preset_sip">Gole</string>
+    <string name="preset_gulps">Goles</string>
+    <string name="preset_small_cup">Copo Pequeno</string>
+    <string name="preset_glass">Copo Grande</string>
+    <string name="preset_bottle">Garrafa</string>
+    <string name="preset_flask">Squeeze</string>
+    
+    <string name="streak_title">OFENSIVA ATIVA</string>
+    <string name="streak_active_text">%1$d Dias Seguidos</string>
+    <string name="streak_empty_text">Nenhuma Ofensiva</string>
+    <string name="streak_congrats_motivation">Incrível! Você está mantendo seu corpo perfeitamente hidratado. 💪</string>
+    <string name="streak_broken_motivation">Beba água hoje para começar ou manter sua sequência diária! 💧</string>
+</resources>

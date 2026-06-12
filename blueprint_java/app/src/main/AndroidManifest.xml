@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.drinkplus">
+
+    <!-- Permissions required for the application -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@android:drawable/ic_menu_today"
+        android:label="DRINK+"
+        android:roundIcon="@android:drawable/ic_menu_today"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- Login Activity (App Launcher Entry Point) -->
+        <activity
+            android:name="com.example.drinkplus.ui.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Goal Personalization Activity -->
+        <activity
+            android:name="com.example.drinkplus.ui.GoalActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Main Consumption Tracking Dashboard -->
+        <activity
+            android:name="com.example.drinkplus.ui.DashboardActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- Hydration Reminder Receiver -->
+        <receiver
+            android:name="com.example.drinkplus.broadcast.NotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

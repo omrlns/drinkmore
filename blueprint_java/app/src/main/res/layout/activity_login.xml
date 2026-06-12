@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF0ED"
+    android:padding="24dp">
+
+    <!-- Brand Header -->
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="Logotipo DRINK+"
+        android:src="@android:drawable/ic_menu_today"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="DRINK+"
+        android:textColor="#005C8A"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+    <TextView
+        android:id="@+id/tv_slogan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/slogan"
+        android:textColor="#5A6B7C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_brand" />
+
+    <!-- Traditional Login Credentials Inputs -->
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="@string/email_label"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#5A6B7C"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_slogan" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:hint="@string/password_label"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#5A6B7C"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/et_email" />
+
+    <!-- Standard Login Action Button -->
+    <Button
+        android:id="@+id/btn_login_traditional"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#005C8A"
+        android:text="@string/btn_login"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/et_password" />
+
+    <!-- Visual Separator Line -->
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="#D1D6D4"
+        app:layout_constraintTop_toBottomOf="@id/btn_login_traditional" />
+
+    <TextView
+        android:id="@+id/tv_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#EEF0ED"
+        android:paddingHorizontal="16dp"
+        android:text="OU"
+        android:textColor="#5A6B7C"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/v_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_divider" />
+
+    <!-- Google Authentication Sign In Button (Google Auth integration requirement) -->
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/btn_google_signin"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/v_divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
